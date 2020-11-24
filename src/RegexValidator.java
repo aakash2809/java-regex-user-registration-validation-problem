@@ -43,8 +43,17 @@ public class RegexValidator {
 
 		return matcherObj.matches();
 	}
-	
-	
-	
-	
+
+	// METHOD TO VALIDATE EMAIL ID
+	public boolean isValidEmail(String email) {
+
+		// REGEX TO CHECK EMAIL ID
+		String emailPattern = "^([A-Za-z\\d-_\\+]+)(\\.[A-Za-z\\d-_]+)?@([a-zA-Z\\d]+)\\.([a-zA-Z]{2,4})(\\.[A-Za-z]{2,4})?$";
+		Pattern compiledEmailPattern = Pattern.compile(emailPattern);
+
+		Matcher matcherObj = compiledEmailPattern.matcher(email);
+
+		return matcherObj.matches();
+	}
+
 }
