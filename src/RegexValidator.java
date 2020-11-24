@@ -7,10 +7,10 @@ public class RegexValidator {
 	public boolean isValidFirstName(String fName) {
 
 		// REGEX TO CHECK FIRST NAME.
-		String regex = "^[A-Z]{1}[a-zA-Z]{2,}$";
+		String fNamePattern = "^[A-Z]{1}[a-zA-Z]{2,}$";
 
 		// COMPILE REGEX PATTERN
-		Pattern p = Pattern.compile(regex);
+		Pattern compiledFNamePattern = Pattern.compile(fNamePattern);
 
 		// IF THE FIRST NAME IS EMPITY OR NULL
 		// return false
@@ -21,26 +21,30 @@ public class RegexValidator {
 		// Pattern CLASS CONTAINS matcher() METHOD
 		// TO FIND MATCHING BETWEEN FIRST NAME
 		// AND REGULAR EXPRESSION.
-		Matcher m = p.matcher(fName);
+		Matcher matcherObj = compiledFNamePattern.matcher(fName);
 
 		// RETURN true if THE fName
 		// MATCHED WITH THE ReGex
-		return m.matches();
+		return matcherObj.matches();
 	}
 
 	// METHOD TO VALIDATE LAST NAME
 	public boolean isValidLastName(String lName) {
 
 		// REGEX TO CHECK LAST NAME.
-		String regex = "^[A-Z]{1}[a-zA-Z]{2,}$";
-		Pattern p = Pattern.compile(regex);
+		String lNamePattern = "^[A-Z]{1}[a-zA-Z]{2,}$";
+		Pattern compiledLNamePattern = Pattern.compile(lNamePattern);
 
 		if (lName == null) {
 			return false;
 		}
 
-		Matcher m = p.matcher(lName);
+		Matcher matcherObj = compiledLNamePattern.matcher(lName);
 
-		return m.matches();
+		return matcherObj.matches();
 	}
+	
+	
+	
+	
 }
