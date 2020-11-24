@@ -28,4 +28,19 @@ public class RegexValidator {
 		return m.matches();
 	}
 
+	// METHOD TO VALIDATE LAST NAME
+	public boolean isValidLastName(String lName) {
+
+		// REGEX TO CHECK LAST NAME.
+		String regex = "^[A-Z]{1}[a-zA-Z]{2,}$";
+		Pattern p = Pattern.compile(regex);
+
+		if (lName == null) {
+			return false;
+		}
+
+		Matcher m = p.matcher(lName);
+
+		return m.matches();
+	}
 }

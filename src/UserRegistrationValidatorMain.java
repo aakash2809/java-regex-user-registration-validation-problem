@@ -12,6 +12,10 @@ public class UserRegistrationValidatorMain {
 		System.out.println(regexValidator.isValidFirstName("Ra")); // false
 		System.out.println(regexValidator.isValidFirstName("rat")); // false
 
+		// TEST CASES FOR LAST NAME
+		System.out.println(regexValidator.isValidFirstName("RaJ")); // true
+		System.out.println(regexValidator.isValidFirstName("Ra")); // false
+		System.out.println(regexValidator.isValidFirstName("raj")); // false
 
 	}
 
