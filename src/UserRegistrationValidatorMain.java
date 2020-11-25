@@ -49,6 +49,14 @@ public class UserRegistrationValidatorMain {
 			System.out.println(regexValidator.isValidEmail(invalidEmailSample[index2]));
 			index2++;
 		}
+		
+		System.out.println("------------------ Mobile Number validation results----------------------");
+		
+		//TEST CASES AND THEIR RESULTS FOR MOBILE NUMBE
+		System.out.println(regexValidator.isValidMobileNumber("91 8819992553"));// true
+		System.out.println(regexValidator.isValidMobileNumber("91 88199925"));//false
+		System.out.println(regexValidator.isValidMobileNumber("918819992553"));//false
+		System.out.println(regexValidator.isValidMobileNumber("8819992553"));//false
 
 	}
 

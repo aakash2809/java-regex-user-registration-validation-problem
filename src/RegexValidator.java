@@ -34,13 +34,10 @@ public class RegexValidator {
 		// REGEX TO CHECK LAST NAME.
 		String lNamePattern = "^[A-Z]{1}[a-zA-Z]{2,}$";
 		Pattern compiledLNamePattern = Pattern.compile(lNamePattern);
-
 		if (lName == null) {
 			return false;
 		}
-
 		Matcher matcherObj = compiledLNamePattern.matcher(lName);
-
 		return matcherObj.matches();
 	}
 
@@ -50,9 +47,17 @@ public class RegexValidator {
 		// REGEX TO CHECK EMAIL ID
 		String emailPattern = "^([A-Za-z\\d-_\\+]+)(\\.[A-Za-z\\d-_]+)?@([a-zA-Z\\d]+)\\.([a-zA-Z]{2,4})(\\.[A-Za-z]{2,4})?$";
 		Pattern compiledEmailPattern = Pattern.compile(emailPattern);
-
 		Matcher matcherObj = compiledEmailPattern.matcher(email);
+		return matcherObj.matches();
+	}
 
+	// METHOD TO VALIDATE MOBILE NUMBER WITH COUNTRY CODE
+	public boolean isValidMobileNumber(String mobileNumber) {
+
+		// REGEX TO CHECK MOBILE NUMBER
+		String mobileNumberPattern = "^(\\+?\\d{1,3})[ ]([0-9]{10})$";
+		Pattern compiledmobileNumberPattern = Pattern.compile(mobileNumberPattern);
+		Matcher matcherObj = compiledmobileNumberPattern.matcher(mobileNumber);
 		return matcherObj.matches();
 	}
 
