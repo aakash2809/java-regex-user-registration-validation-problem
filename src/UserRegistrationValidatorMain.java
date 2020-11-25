@@ -57,14 +57,14 @@ public class UserRegistrationValidatorMain {
 		System.out.println(regexValidator.isValidMobileNumber("91 88199925"));// false
 		System.out.println(regexValidator.isValidMobileNumber("918819992553"));// false
 		System.out.println(regexValidator.isValidMobileNumber("8819992553"));// false
-		
+
 		// VALIDATE PASSWORD FOR MINIMUM 8 CHARACTER
 		// AND ALTEAST ONE CAPITAL CHARACTER
-		System.out.println("------------------ Password validation for rule 2 include rule 1 results--------------");
-		System.out.println(regexValidator.isValidPassword("sfhkg34i@"));// false
-		System.out.println(regexValidator.isValidPassword("tyuyAtir"));// true
-		System.out.println(regexValidator.isValidPassword("3etjodnc"));// false
-		System.out.println(regexValidator.isValidPassword("@sfRTrek4t#"));// true
+		System.out.println("------------------ Password validation for rule 3 including previous 2 & results--------------");
+		System.out.println(regexValidator.isValidPassword("sfhkg34i@"));// false ->not contain capital letter
+		System.out.println(regexValidator.isValidPassword("tyuyAtir"));// false ->not contain numeric number
+		System.out.println(regexValidator.isValidPassword("3etjoA"));// false ->not having minimum 8 character
+		System.out.println(regexValidator.isValidPassword("5sfRTrekt"));// true ->fulfilled all conditions
 
 	}
 
