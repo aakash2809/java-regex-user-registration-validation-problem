@@ -49,14 +49,21 @@ public class UserRegistrationValidatorMain {
 			System.out.println(regexValidator.isValidEmail(invalidEmailSample[index2]));
 			index2++;
 		}
-		
+
 		System.out.println("------------------ Mobile Number validation results----------------------");
-		
-		//TEST CASES AND THEIR RESULTS FOR MOBILE NUMBE
+
+		// TEST CASES AND THEIR RESULTS FOR MOBILE NUMBE
 		System.out.println(regexValidator.isValidMobileNumber("91 8819992553"));// true
-		System.out.println(regexValidator.isValidMobileNumber("91 88199925"));//false
-		System.out.println(regexValidator.isValidMobileNumber("918819992553"));//false
-		System.out.println(regexValidator.isValidMobileNumber("8819992553"));//false
+		System.out.println(regexValidator.isValidMobileNumber("91 88199925"));// false
+		System.out.println(regexValidator.isValidMobileNumber("918819992553"));// false
+		System.out.println(regexValidator.isValidMobileNumber("8819992553"));// false
+		
+		System.out.println("------------------ Password validation for rule 1 results----------------------");
+		System.out.println(regexValidator.isValidPassword("sfhkg34i@"));// true
+		System.out.println(regexValidator.isValidPassword("tyuy"));// false
+		System.out.println(regexValidator.isValidPassword("3etjodnc"));//true 
+		System.out.println(regexValidator.isValidPassword("@sf"));// false
+	
 
 	}
 
