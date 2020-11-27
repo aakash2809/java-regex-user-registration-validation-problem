@@ -60,11 +60,14 @@ public class UserRegistrationValidatorMain {
 
 		// VALIDATE PASSWORD FOR MINIMUM 8 CHARACTER
 		// AND ALTEAST ONE CAPITAL CHARACTER
-		System.out.println("------------------ Password validation for rule 3 including previous 2 & results--------------");
+		//ATLEASET ONE NUMERIC VALUE
+		// ATLEAST ONE SPECIAL CHARACTER
+		System.out.println("------------------ Password validation for rule 4 including previous 3 & results--------------");
 		System.out.println(regexValidator.isValidPassword("sfhkg34i@"));// false ->not contain capital letter
-		System.out.println(regexValidator.isValidPassword("tyuyAtir"));// false ->not contain numeric number
-		System.out.println(regexValidator.isValidPassword("3etjoA"));// false ->not having minimum 8 character
-		System.out.println(regexValidator.isValidPassword("5sfRTrekt"));// true ->fulfilled all conditions
+		System.out.println(regexValidator.isValidPassword("tyuyAtir"));// false ->not contain numeric number,special character
+		System.out.println(regexValidator.isValidPassword("3etjoA"));// false ->not having minimum 8 character and special character
+		System.out.println(regexValidator.isValidPassword("5sfRTrekt"));// false ->not having special character
+		System.out.println(regexValidator.isValidPassword("5sfRTrekt@"));// true ->fulfilled all conditions
 
 	}
 

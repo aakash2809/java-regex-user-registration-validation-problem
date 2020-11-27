@@ -6,25 +6,13 @@ public class RegexValidator {
 	// METHOD TO VALIDATE FIRST NAME
 	public boolean isValidFirstName(String fName) {
 
-		// REGEX TO CHECK FIRST NAME.
 		String fNamePattern = "^[A-Z]{1}[a-zA-Z]{2,}$";
-
-		// COMPILE REGEX PATTERN
 		Pattern compiledFNamePattern = Pattern.compile(fNamePattern);
-
-		// IF THE FIRST NAME IS EMPITY OR NULL
-		// return false
 		if (fName == null) {
 			return false;
 		}
 
-		// Pattern CLASS CONTAINS matcher() METHOD
-		// TO FIND MATCHING BETWEEN FIRST NAME
-		// AND REGULAR EXPRESSION.
 		Matcher matcherObj = compiledFNamePattern.matcher(fName);
-
-		// RETURN true if THE fName
-		// MATCHED WITH THE ReGex
 		return matcherObj.matches();
 	}
 
@@ -67,9 +55,9 @@ public class RegexValidator {
 	public boolean isValidPassword(String password) {
 
 		// REGEX TO CHECK MOBILE NUMBER
-		String passwordPattern = "^(?=.*[0-9])(?=.*[A-Z])[a-zA-Z0-9!?.+-~!@#$%^&*_]{8,}$";
+		String passwordPattern = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[\\~\\?\\.\\+\\-\\~\\!\\@\\#\\$\\%\\^\\&\\*\\_])[a-zA-Z0-9\\~\\?\\.\\+\\-\\~\\!\\@\\#\\$\\%\\^\\&\\*\\_]{8,}$";
 		Pattern compiledpaswordPattern = Pattern.compile(passwordPattern);
-		Matcher matcherObj = compiledpaswordPattern.matcher(password);
+		Matcher matcherObj = compiledpaswordPattern.matcher(password);	
 		return matcherObj.matches();
 
 	}
