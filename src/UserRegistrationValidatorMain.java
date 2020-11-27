@@ -37,14 +37,14 @@ public class UserRegistrationValidatorMain {
 		System.out.println("------------------ Email validation results----------------------");
 		// VAILDATION OF EMAIL BY PROVIDING SAMPLE INPUT
 		System.out.println("Valid email list results");
-		// 1 .ALL SHOULD PRINT TRUE
+		// 1 . ALL SHOULD PRINT TRUE
 		while (index1 < validEmailSample.length) {
 			System.out.println(regexValidator.isValidEmail(validEmailSample[index1]));
 			index1++;
 		}
 
 		System.out.println("Invalid email list results");
-		// 2.ALL SHOULD PRINT FALSE
+		// 2 . ALL SHOULD PRINT FALSE
 		while (index2 < invalidEmailSample.length) {
 			System.out.println(regexValidator.isValidEmail(invalidEmailSample[index2]));
 			index2++;

@@ -52,12 +52,13 @@ public class RegexValidator {
 	// METHOD TO VALIDATE PASSWORD FOR MINIMUM 8 CHARACTER
 	// ALTEAST ONE CAPITAL CHARACTER
 	// ATLEAST ONE NUMERIC NUMBER
+	// ATLEAST ONE SPECIAL CHARACTER
 	public boolean isValidPassword(String password) {
 
 		// REGEX TO CHECK MOBILE NUMBER
 		String passwordPattern = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[\\~\\?\\.\\+\\-\\~\\!\\@\\#\\$\\%\\^\\&\\*\\_])[a-zA-Z0-9\\~\\?\\.\\+\\-\\~\\!\\@\\#\\$\\%\\^\\&\\*\\_]{8,}$";
 		Pattern compiledpaswordPattern = Pattern.compile(passwordPattern);
-		Matcher matcherObj = compiledpaswordPattern.matcher(password);	
+		Matcher matcherObj = compiledpaswordPattern.matcher(password);
 		return matcherObj.matches();
 
 	}
