@@ -39,7 +39,7 @@ public class UserEmailTest {
 	}
 
 	@Test
-	public void testUserEmail() {
+	public void testUserEmail() throws UserRegistrationException {
 		assertEquals(expectedResult, userEmail.isValidEmail(email));
 	}
 

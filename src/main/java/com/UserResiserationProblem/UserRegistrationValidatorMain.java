@@ -2,7 +2,7 @@
 package com.UserResiserationProblem;
 public class UserRegistrationValidatorMain {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UserRegistrationException {
 
 		// INDEX VARIABLES FOR ITTERATION
 		int index1 = 0;
